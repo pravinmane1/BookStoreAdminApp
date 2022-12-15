@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsersActivity">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/all_users"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Users"/>
+            <View
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray"
+                />
+            <TextView
+                android:id="@+id/user_count"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - - - - "/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <com.llollox.androidtoggleswitch.widgets.ToggleSwitch
+        android:id="@+id/toggle_switch"
+        app:checkedBackgroundColor="@color/neongreen"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/all_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:textToggleLeft="New Users"
+        app:textToggleCenter="Logins"
+        app:textToggleRight="App opened" />
+
+
+    <LinearLayout
+        android:id="@+id/time"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toggle_switch"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_margin="5dp"
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true">
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today"/>
+
+            <TextView
+                android:id="@+id/today_count"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - - -"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="5dp"
+            android:id="@+id/this_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true">
+
+            <LinearLayout
+                android:gravity="center"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This Week"/>
+
+                <TextView
+                    android:id="@+id/week_count"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - - -"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="5dp"
+            android:id="@+id/this_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true">
+
+            <LinearLayout
+                android:gravity="center"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This Month"/>
+
+                <TextView
+                    android:id="@+id/month_count"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - - -"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/time"
+        android:layout_margin="5dp"
+        android:id="@+id/custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From: "/>
+
+            <EditText
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/from"
+                android:textSize="15sp"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To: "/>
+
+                <EditText
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/to"
+                    android:textSize="15sp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+               <Button
+                   android:id="@+id/calculate"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Calculate"/>
+
+                <TextView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/custom_count"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- - - - - - - - - - - - "
+                    android:focusable="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:layout_below="@+id/custom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Chart"/>
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:src="@drawable/fastforward"
+            android:textSize="20sp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="300"/>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

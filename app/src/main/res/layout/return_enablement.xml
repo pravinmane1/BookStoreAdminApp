@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginBottom="40dp"
+        android:id="@+id/ll_offer_amt"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Offer Amount"
+            android:id="@+id/tv_desc"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/et_desc"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="Rs. 800"
+            android:layout_below="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_autocalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autocalculate"/>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginBottom="40dp"
+        android:id="@+id/ll_returnable"
+        android:layout_below="@+id/ll_offer_amt"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Returnable"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Switch
+            android:layout_marginStart="20dp"
+            android:id="@+id/sw_returnable"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="40dp"
+        android:id="@+id/ll_required_count"
+        android:layout_below="@+id/ll_returnable"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Minimum return old book count: "
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:inputType="number"
+            android:minWidth="50dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/et_required"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="40dp"
+        android:id="@+id/ll_min_cart_count"
+        android:layout_below="@+id/ll_required_count"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Minimum cart new book count: "
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:inputType="number"
+            android:minWidth="50dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/et_cart_required"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_min_cart_count"
+        android:text="save"
+        style="?borderlessButtonStyle"
+        android:background="@color/lightRed"/>
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/users"
+            android:checkable="true"
+            android:title="All Users" />
+
+        <item
+            android:id="@+id/orders"
+            android:checkable="true"
+            android:title="All Orders" />
+
+        <item
+            android:id="@+id/courses_listing"
+            android:checkable="true"
+
+            android:title="Courses Listing" />
+
+        <item
+            android:id="@+id/stationary_listing"
+            android:checkable="true"
+
+            android:title="Stationary Listing" />
+
+        <item
+            android:id="@+id/slider_menu"
+            android:checkable="true"
+
+            android:title="Slider Menu" />
+    </group>
+    <!--<group-->
+    <!--android:id="@+id/grp2"-->
+    <!--android:checkableBehavior="single">-->
+
+    <!--<item-->
+    <!--android:id="@+id/books"-->
+    <!--android:checkable="true"-->
+
+    <!--android:title="Books" />-->
+    <!--<item-->
+    <!--android:id="@+id/exam_saviours"-->
+    <!--android:checkable="true"-->
+
+    <!--android:title="Exam Saviours" />-->
+    <!--<item-->
+    <!--android:id="@+id/projects"-->
+    <!--android:checkable="true"-->
+
+    <!--android:title="Projects" />-->
+
+
+    <!--</group>-->
+    <!--<group-->
+        <!--android:id="@+id/grp3"-->
+        <!--android:checkableBehavior="single">-->
+
+        <!--<item-->
+            <!--android:id="@+id/help_and_support"-->
+            <!--android:checkable="true"-->
+
+            <!--android:title="Help and Support" />-->
+        <!--<item-->
+            <!--android:id="@+id/policies"-->
+            <!--android:checkable="true"-->
+
+            <!--android:title="Policies" />-->
+        <!--<item-->
+            <!--android:id="@+id/about"-->
+            <!--android:checkable="true"-->
+
+            <!--android:title="About" />-->
+
+
+    <!--</group>-->
+
+    <group
+        android:id="@+id/grp4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/logout"
+            android:checkable="true"
+
+            android:title="Logout" />
+    </group>
+
+</menu>

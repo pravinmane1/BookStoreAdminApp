@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".UserDetailsActivity">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/img_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:src="@drawable/userdisplay"/>
+
+       <Switch
+           android:id="@+id/switch1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/img"/>
+        </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/img_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/orders"
+        android:minWidth="130dp"
+        android:textAlignment="center"
+        android:layout_margin="2dp"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="5dp"
+        android:textSize="20dp"
+        android:text="ORDERS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/cart"
+            android:minWidth="130dp"
+            android:textAlignment="center"
+            android:layout_margin="2dp"
+            android:textColor="@color/white"
+            android:background="@color/neongreen"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CART"/>
+        <TextView
+            android:id="@+id/wishlist"
+            android:minWidth="130dp"
+            android:textAlignment="center"
+            android:layout_margin="2dp"
+            android:textColor="@color/white"
+            android:background="@color/aqua"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WISHLIST"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/basic_details"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/img_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name : "/>
+            <EditText
+                android:id="@+id/name"
+                android:textAlignment="center"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uid : "/>
+            <EditText
+                android:id="@+id/uid"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:editable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NA"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number : "/>
+            <EditText
+                android:id="@+id/phone"
+                android:textAlignment="center"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NA"/>
+            <TextView
+                android:id="@+id/phone_status"
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="- - - - "/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        <ImageView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/name_edit"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/edit_action"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <ImageView
+            android:layout_marginBottom="20dp"
+
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <ImageView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/number_edit"
+            android:src="@drawable/edit_action"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/basic_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="9"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register Date : "/>
+                <EditText
+                    android:id="@+id/register_date"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Login : "/>
+                <EditText
+                    android:id="@+id/last_login"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Opened : "/>
+                <EditText
+                    android:id="@+id/last_opened"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Orders : "/>
+                <EditText
+                    android:id="@+id/total_orders"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="College : "/>
+                <EditText
+                    android:id="@+id/college"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course : "/>
+                <EditText
+                    android:id="@+id/course"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:visibility="invisible"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/register_date_edit"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/edit_action"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <ImageView
+                android:visibility="invisible"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/last_login_edit"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/edit_action"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <ImageView
+                android:visibility="invisible"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/last_opened_edit"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/edit_action"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <ImageView
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/total_orders_edit"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/edit_action"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/college_edit"
+                android:layout_marginBottom="20dp"
+                android:src="@mipmap/edit_action"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/course_edit"
+                android:src="@drawable/edit_action"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

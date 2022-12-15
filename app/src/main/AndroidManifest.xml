@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.twenty80partnership.bibliofyadmin">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".BookDetails3NPSActivity"></activity>
+        <activity android:name=".BookList3NPSActivity" />
+        <activity android:name=".AssignedOrdersActivity" />
+        <activity android:name=".DeliveryPersonsActivity" />
+        <activity android:name=".BookTemplatesActivity" />
+        <activity android:name=".AllTermsActivity" />
+        <activity android:name=".BookList2PSActivity" />
+        <activity android:name=".BookDetails2PSActivity" />
+        <activity android:name=".CombinationsActivity" />
+        <activity android:name=".DataAcessTestActivity" />
+        <activity android:name=".DeliveryPinsActivity" />
+        <activity android:name=".OrderDataActivity" />
+        <activity
+            android:name=".YMALMenuActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity android:name=".HomeCoursesActivity" />
+        <activity android:name=".BranchesActivity" />
+        <activity android:name=".SliderMenuActivity" />
+        <activity android:name=".HomeMenuActivity" />
+        <activity android:name=".StationaryDetailsActivity" />
+        <activity android:name=".StationaryListActivity" />
+        <activity android:name=".BannerActivity" />
+        <activity android:name=".TermsApplicableActivity" />
+        <activity android:name=".CodeListActivity" />
+        <activity android:name=".BookDetailsActivity" />
+        <activity android:name=".BookListActivity" />
+
+        <service
+            android:name=".Services.ListenOrder"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".BooksCategoryActivity" />
+        <activity android:name=".OrderDetailsActivity" />
+        <activity android:name=".UserCartActivity" />
+        <activity android:name=".UserOrderDetailsActivity" />
+        <activity android:name=".UserOrdersActivity" />
+        <activity android:name=".CourseDefinitionsActivity" />
+        <activity android:name=".UserDetailsActivity" />
+        <activity android:name=".UserListActivity" />
+        <activity android:name=".StationaryActivity" />
+        <activity android:name=".CoursesListingActivity" />
+        <activity android:name=".OrdersActivity" />
+        <activity android:name=".UsersActivity" />
+        <activity android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DashboardActivity" />
+    </application>
+
+</manifest>

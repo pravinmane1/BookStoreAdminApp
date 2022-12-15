@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:id="@+id/edits"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_margin="2dp"
+            android:hint="Name of subject"
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:ems="10"
+            android:inputType="text" />
+        <Spinner
+            android:layout_margin="2dp"
+            android:hint="Name of subject"
+            android:id="@+id/sp_default_publication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:ems="10"
+            android:inputType="text" />
+
+        <EditText
+            android:layout_margin="2dp"
+            android:hint="Priority"
+            android:id="@+id/et_priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@+id/edits"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btn_save"
+        android:layout_marginStart="10dp"
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>

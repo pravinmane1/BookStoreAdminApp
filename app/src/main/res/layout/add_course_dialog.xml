@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:id="@+id/edits"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_margin="2dp"
+            android:hint="Name of Course to Display"
+            android:id="@+id/course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:ems="10"
+            android:inputType="text" />
+
+
+
+        <EditText
+            android:layout_margin="2dp"
+            android:layout_below="@id/course"
+            android:hint="Id of Course to save"
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:ems="10"
+            android:inputType="text" />
+
+        <EditText
+            android:layout_margin="2dp"
+            android:layout_below="@id/course"
+            android:hint="Add Sem (S1/S2)"
+            android:id="@+id/code"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:ems="10"
+            android:inputType="text" />
+
+        <EditText
+            android:layout_margin="2dp"
+            android:layout_below="@id/id"
+            android:hint="Priority"
+            android:id="@+id/topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_year1common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="year 1 common for all branches?"
+            android:gravity="center"/>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_marginTop="10dp"
+            android:id="@+id/sw_publication_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Has Publication system"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_below="@id/edits"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/select"
+        android:layout_marginEnd="10dp"
+        android:text="select display pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       />
+        <Button
+            android:id="@+id/upload"
+            android:layout_marginStart="10dp"
+            android:text="Save Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

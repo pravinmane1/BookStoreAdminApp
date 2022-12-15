@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookDetails2PSActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:visibility="gone"
+            android:textSize="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/publication"
+            android:singleLine="true"/>
+
+        <ImageView
+            android:background="@color/purple"
+            android:layout_marginTop="20dp"
+            android:id="@+id/img"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:minHeight="130dp"
+            android:adjustViewBounds="true"
+            android:minWidth="100dp"
+            android:maxHeight="200dp"
+            android:maxWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_marginTop="60dp"
+            android:id="@+id/ll_availability"
+            android:layout_toEndOf="@+id/img"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Availability: "/>
+            <Switch
+                android:checked="true"
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toEndOf="@+id/img"
+            android:layout_below="@id/ll_availability"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Visibility: "/>
+            <Switch
+                android:checked="true"
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:id="@+id/remove"
+            android:layout_centerHorizontal="true"
+            android:background="@color/green"
+            android:text="remove pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/remove"
+            android:id="@+id/name_layout"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Name: "/>
+
+            <Spinner
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:backgroundTint="@color/green"
+                android:id="@+id/sv_template"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/first"
+            android:layout_below="@id/name_layout"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Spinner
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:backgroundTint="@color/green"
+                android:id="@+id/sv_publication"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_below="@+id/original_details"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/price_details"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@color/lightGreen"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profit :₹ \n"/>
+                    <EditText
+                        android:textStyle="bold|italic"
+                        android:inputType="numberDecimal"
+                        android:textSize="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/profit"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/lightYellow"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%Selling Discount"/>
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:textSize="13dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/discount"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/lightYellow"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selling Price: ₹\n"/>
+                    <EditText
+                        android:textColor="@color/black"
+                        android:inputType="numberDecimal"
+                        android:textSize="15dp"
+                        android:textStyle="bold|italic"
+                        android:id="@+id/discounted_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/first"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/original_details"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:background="@color/lightRed"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MRP : ₹\n"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:textSize="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/original_price"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:background="@color/lightRed"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%Buying Discount"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:textSize="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buying_discount"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:background="@color/lightRed"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buying Price: ₹ \n"/>
+                <EditText
+                    android:textColor="@color/black"
+                    android:inputType="numberDecimal"
+                    android:textSize="15dp"
+                    android:textStyle="bold|italic"
+                    android:id="@+id/buying_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/price_details"
+            android:id="@+id/author_layout"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Author: "/>
+            <EditText
+                android:textSize="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/author"
+                android:singleLine="true"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_id"
+            android:layout_below="@id/author_layout"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Id: "/>
+            <EditText
+                android:textSize="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/id"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/ripple"
+            android:layout_below="@id/ll_id"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/update"
+            android:text="save"/>
+    </RelativeLayout>
+</ScrollView>

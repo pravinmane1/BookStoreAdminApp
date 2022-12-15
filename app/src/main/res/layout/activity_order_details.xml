@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".OrderDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/lightGreen"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Order Details"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbarlayout"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/recycler_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/lightGreen">
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/date"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentStart="true"-->
+                <!--                    android:layout_alignParentTop="true"-->
+                <!--                    android:layout_marginStart="20dp"-->
+                <!--                    android:fontFamily="@font/andika_font"-->
+                <!--                    android:text="Mar 09, 2:28 PM" />-->
+
+                <TextView
+                    android:id="@+id/o_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Order Id - sdfdfs45645df" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/warning_anim"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/o_id"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="9dp"
+                    android:visibility="visible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="simple_tick.json"
+                    app:lottie_loop="false" />
+
+                <TextView
+                    android:id="@+id/payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/o_id"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/warning_anim"
+                    android:text="₹ 550"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/resolve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/o_id"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/payment"
+                    android:text="(Cash On Delivery)"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/o_id"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@+id/resolve"
+                    android:visibility="visible"
+                    android:src="@drawable/setting" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/delivery_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/delivery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/borderless_colored"
+                android:padding="4dp"
+                android:text="Delivery expected by Mar 15"
+                android:textColor="@color/blue" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/step_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/delivery_date"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/img1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_fileName="tick.json"
+                    app:lottie_loop="false" />
+
+                <TextView
+                    android:id="@+id/placed_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/img1"
+                    android:text="Placed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/img1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/placed_label"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/img1"
+                    android:gravity="center_vertical"
+                    android:text="Your order is placed"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/placed_label"
+                    app:layout_constraintTop_toBottomOf="@id/placed_label" />
+
+                <TextView
+                    android:id="@+id/status_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/desc"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/img1"
+                    android:gravity="center_vertical"
+                    android:text="Mar 14, 2:29 PM"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/desc"
+                    app:layout_constraintTop_toBottomOf="@id/desc" />
+
+
+                <View
+                    android:id="@+id/bar1"
+                    android:layout_width="1.5dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/img1"
+                    android:layout_marginStart="12.5dp"
+                    android:background="@color/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/confirmed_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img1" />
+
+
+                <TextView
+                    android:id="@+id/confirmed_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/img1"
+                    android:text="Confirmed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/img1"
+                    app:layout_constraintTop_toBottomOf="@+id/status_time" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/img2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bar1"
+                    app:lottie_fileName="tick.json"
+                    app:lottie_loop="false" />
+
+                <TextView
+                    android:id="@+id/desc2"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/confirmed_label"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:text="Your order is Confirmed"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/placed_label"
+                    app:layout_constraintTop_toBottomOf="@id/confirmed_label" />
+
+                <TextView
+                    android:id="@+id/status_time2"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/img1"
+                    android:gravity="center_vertical"
+                    android:text="Mar 14, 2:29 PM"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/desc"
+                    app:layout_constraintTop_toBottomOf="@id/desc2" />
+
+
+                <View
+                    android:id="@+id/bar2"
+                    android:layout_width="1.5dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="12.5dp"
+                    android:background="@color/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/dispatched_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img2" />
+
+
+                <TextView
+                    android:id="@+id/dispatched_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Dispatched"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/img1"
+                    app:layout_constraintTop_toBottomOf="@+id/status_time2" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/img3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bar2"
+                    app:lottie_fileName="tick.json"
+                    app:lottie_loop="false" />
+
+                <TextView
+                    android:id="@+id/desc3"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/confirmed_label"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:text="Your order is dispatched"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/placed_label"
+                    app:layout_constraintTop_toBottomOf="@id/dispatched_label" />
+
+                <TextView
+                    android:id="@+id/status_time3"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/img1"
+                    android:gravity="center_vertical"
+                    android:text="Mar 14, 2:29 PM"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/placed_label"
+                    app:layout_constraintTop_toBottomOf="@id/desc3" />
+
+
+                <View
+                    android:id="@+id/bar3"
+                    android:layout_width="1.5dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="12.5dp"
+                    android:background="@color/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/delivered_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img3" />
+
+
+                <TextView
+
+                    android:id="@+id/delivered_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Delivered"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/img1"
+                    app:layout_constraintTop_toBottomOf="@+id/status_time3" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/img4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bar3"
+                    app:lottie_fileName="tick.json"
+                    app:lottie_loop="false" />
+
+                <TextView
+                    android:id="@+id/desc4"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:text="Your order is delivered"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/placed_label"
+                    app:layout_constraintTop_toBottomOf="@id/delivered_label" />
+
+                <TextView
+                    android:id="@+id/status_time4"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/img1"
+                    android:gravity="center_vertical"
+                    android:text="Mar 14, 2:29 PM"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/placed_label"
+                    app:layout_constraintTop_toBottomOf="@id/desc4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/order_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/step_view"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/slit_border_white_background">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/arrow_all"
+                    android:overScrollMode="never" />
+
+                <ImageView
+                    android:id="@+id/arrow_all"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/setting" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/address_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_data"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_action_edit_black" />
+
+                    <TextView
+                        android:id="@+id/address_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:paddingStart="10dp"
+                        android:text="ADDRESS"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/address_tag"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Pravin mane"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:text="7057065515"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/number"
+                        android:layout_marginStart="10dp"
+                        android:text="wadia college boys hostel. pune 411001, pune maharashtra"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/SplitLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/address"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/lightwhite" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/price_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_details"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:text="PRICE DETAILS"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/total_items"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="Price (6 items)"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/amount_items"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="end"
+                            android:paddingStart="10sp"
+                            android:paddingEnd="10dp"
+                            android:text="1000"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="5"
+                            android:paddingStart="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="5dp"
+                                android:text="Delivery"
+                                tools:ignore="HardcodedText,RtlSymmetry" />
+
+                            <TextView
+                                android:id="@+id/pin_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="411001"
+                                android:textColor="@color/blue"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/amount_delivery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="end"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="40"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="Total Amount"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/amount_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="end|center_vertical"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="1040"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/SplitLine_hr"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/lightwhite" />
+
+                <TextView
+                    android:id="@+id/amount_savings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:paddingStart="10dp"
+                    android:text="You will save 550 on this order"
+                    android:textColor="@color/green"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/pincode_layout"
+        android:orientation="horizontal"
+        android:weightSum="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Name"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/et_name"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="Pravin Mane"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/days_for_delivery_layout"
+        android:layout_below="@+id/pincode_layout"
+        android:orientation="horizontal"
+        android:weightSum="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Contact"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+        <EditText
+            android:id="@+id/et_no"
+            android:inputType="number"
+            android:maxLength="10"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="9876543210"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/delivery_charges_layout"
+        android:layout_below="@+id/days_for_delivery_layout"
+        android:orientation="horizontal"
+        android:weightSum="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Email"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+        <EditText
+            android:id="@+id/et_email"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="boy@delivery.com"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delivery_charges_layout"
+        android:text="save"
+        style="?borderlessButtonStyle"
+        android:background="@color/lightRed"/>
+</RelativeLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserOrderDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbarlayout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:minHeight="?attr/actionBarSize"
+            app:titleTextColor="@color/black"
+            app:title="Order Details" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbarlayout"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/recycler_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/o_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order Id:sdfdfs45645df" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:overScrollMode="never"
+                android:id="@+id/recycler_view"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+            <include
+                layout="@layout/address_row"/>
+            <androidx.cardview.widget.CardView
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/price_details"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textSize="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:textStyle="bold"
+                        android:text="PRICE DETAILS"/>
+                    <View
+                        android:id="@+id/SplitLine_h"
+                        android:layout_width="match_parent"
+                        android:layout_height= "1.5dp"
+                        android:background="@color/lightwhite" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/total_items"
+                                android:paddingStart="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="5"
+                                android:layout_height="wrap_content"
+                                android:text="Price (6 items)"/>
+                            <TextView
+                                android:id="@+id/amount_items"
+                                android:gravity="end"
+                                android:paddingEnd="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="5"
+                                android:layout_height="wrap_content"
+                                android:text="1000"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:paddingStart="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="5"
+                                android:layout_height="wrap_content"
+                                android:text="Delivery"/>
+                            <TextView
+                                android:id="@+id/amount_delivery"
+                                android:gravity="end"
+                                android:paddingEnd="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="5"
+                                android:layout_height="wrap_content"
+                                android:text="40"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:paddingStart="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="5"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:textColor="@color/black"
+                                android:text="Total Amount"/>
+                            <TextView
+                                android:id="@+id/amount_total"
+                                android:textSize="15dp"
+                                android:gravity="end"
+                                android:paddingEnd="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="5"
+                                android:layout_height="wrap_content"
+                                android:text="1040"
+                                android:textColor="@color/black"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/SplitLine_hr"
+                        android:layout_width="match_parent"
+                        android:layout_height= "1.5dp"
+                        android:background="@color/lightwhite" />
+                    <TextView
+                        android:id="@+id/amount_savings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="You will save 550 on this order"
+                        android:textColor="@color/green"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
